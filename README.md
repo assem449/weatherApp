@@ -11,7 +11,6 @@ This react application recommends what to wear according to the weather.
 
 ```
 git clone https://github.com/assem449/weatherApp.git
-cd weatherApp
 npm install
 ```
 
@@ -19,7 +18,6 @@ npm install
 
 ```
 npm start
-why it says it cannot be committed 
 ```
 
 ## Features
