@@ -1,11 +1,11 @@
 import React from 'react';
 import './ClothingRecommendation.css';
-import clearSkyHot from '../images/clearSkyHot.png';
-import shirtWithJeans from '../images/shirtWithJeans.png';
-import winterCloth from '../images/winterCloth.png';
-import raincoat from '../images/raincoat.png';
-import jeansWithJacket from '../images/jeansWithJacket.png';
-import surprised from '../images/surprised.png';
+import clearSkyHot from '../../images/clearSkyHot.png';
+import shirtWithJeans from '../../images/shirtWithJeans.png';
+import winterCloth from '../../images/winterCloth.png';
+import raincoat from '../../images/raincoat.png';
+import jeansWithJacket from '../../images/jeansWithJacket.png';
+import surprised from '../../images/surprised.png';
 
 export default function ClothingRecommendation({ weatherDesc, temperature }) {
   console.log('Weather Description:', weatherDesc);

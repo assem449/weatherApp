@@ -42,8 +42,8 @@ export default class WeatherBox extends React.Component {
         <img
           src={
             this.props.icon
-              ? require(`../images/${this.props.icon}.svg`)
-              : require('../images/01d.svg')
+              ? require(`../../images/${this.props.icon}.svg`)
+              : require('../../images/01d.svg')
           }
           alt='sun'
         />

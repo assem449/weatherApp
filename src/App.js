@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import MainWeatherWindow from './components/MainWeatherWindow';
-import CityInput from './components/CityInput';
-import WeatherBox from './components/WeatherBox';
-import ClothingRecommendation from './components/ClothingRecommendation';
+import MainWeatherWindow from './components/MainWeatherWindow/MainWeatherWindow';
+import CityInput from './components/CityInput/CityInput';
+import WeatherBox from './components/WeatherBox/WeatherBox';
+import ClothingRecommendation from './components/ClothingRecommendation/ClothingRecommendation';
 
 class App extends React.Component {
   // Initialize the state with city set to undefined and an array for 5 days' weather data

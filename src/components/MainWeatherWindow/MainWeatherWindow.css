@@ -61,7 +61,7 @@
   
   .title:before {
     content: '';
-    background: url('../images/02d.svg') no-repeat;
+    background: url('../../images/02d.svg') no-repeat;
     background-size: 100%;
     width: 250px;
     height: 250px;
