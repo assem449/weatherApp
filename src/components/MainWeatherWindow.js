@@ -32,7 +32,7 @@ export default class MainWeatherWindow extends React.Component {
             <span>Today</span>
             <h1>{this.props.city}</h1>
             <p>
-              Temperature: {this.props.data ? Math.round(this.props.data.temp - 273.15) : 0}
+              Temperature: {this.props.data ? Math.round(this.props.data.temp) : 0}
               °C
             </p>
             <p>{this.props.data ? this.props.data.weather_desc.toLowerCase() : ''}</p>

@@ -17,21 +17,27 @@ class App extends React.Component {
     const city = data.city.name;
     const days = [];
     const dayIndices = this.getDayIndices(data);
-
+  
     for (let i = 0; i < 5; i++) {
+      // Convert temperature from Kelvin to Celsius
+      const temperatureCelsius = data.list[dayIndices[i]].main.temp - 273.15;
+  
       days.push({
         date: data.list[dayIndices[i]].dt_txt,
         weather_desc: data.list[dayIndices[i]].weather[0].description,
         icon: data.list[dayIndices[i]].weather[0].icon,
-        temp: data.list[dayIndices[i]].main.temp
+        temp: temperatureCelsius // Store temperature in Celsius
       });
     }
-
+  
+    const currentTemperature = days[0].temp;
     this.setState({
       city: city,
-      days: days
+      days: days,
+      temperature: currentTemperature
     });
   };
+  
 
   // Asynchronous method to make an API call to OpenWeatherMap based on the provided city
   makeApiCall = async city => {
@@ -68,7 +74,7 @@ class App extends React.Component {
 
    // Render method to render the components and UI elements on the webpage
   render() {
-    const { city, days } = this.state;
+    const { city, days, temperature} = this.state;
     const WeatherBoxes = () => {
       const weatherBoxes = this.state.days.slice(1).map((day, index) => (
         <li key={index}>
@@ -84,7 +90,7 @@ class App extends React.Component {
         <div className='content'>
           <div className='clothes-list'>
             <h2>Clothing recommendations:</h2>
-            {city && days[0] && <ClothingRecommendation weatherDesc={days[0].weather_desc} />}
+            {city && temperature && <ClothingRecommendation weatherDesc={days[0].weather_desc} temperature={temperature} />}
           </div>
           <div className='weather-info'>
             <MainWeatherWindow data={this.state.days[0]} city={this.state.city}>

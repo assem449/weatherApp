@@ -19,7 +19,7 @@ export default class WeatherBox extends React.Component {
     if (weatherDescription.includes('rain')) {
       return 'Bring an umbrella!';
     } else if (weatherDescription.includes('cloud')) {
-      return 'Bring a jacket';
+      return 'It\'s cloudy!';
     } else if (weatherDescription.includes('clear')) {
       return 'It\'s sunny!';
     } else {
@@ -47,7 +47,7 @@ export default class WeatherBox extends React.Component {
           }
           alt='sun'
         />
-        <span className='temp'>{Math.round(this.props.temp - 273.15)}°C</span>
+        <span className='temp'>{Math.round(this.props.temp)}°C</span>
         <p>{weatherDescription}</p>
       </div>
     );

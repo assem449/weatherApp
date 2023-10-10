@@ -8,6 +8,8 @@ import jeansWithJacket from '../images/jeansWithJacket.png';
 import surprised from '../images/surprised.png';
 
 export default function ClothingRecommendation({ weatherDesc, temperature }) {
+  console.log('Weather Description:', weatherDesc);
+  console.log('Temperature:', temperature);
   const getRecommendedClothes = (weatherDesc, temperature) => {
     const weatherToClothes = {
       'clear sky': {
@@ -26,6 +28,11 @@ export default function ClothingRecommendation({ weatherDesc, temperature }) {
         cold: { recommendation: 'Good luck my friend! Wear something warmer under the raincoat.', image: raincoat},
       },
       'light rain': {
+        hot: { recommendation: 'Pairing a T-shirt with jeans is a timeless choice, and do not forget to bring an umbrella for unpredictable weather conditions', image: shirtWithJeans},
+        moderate: { recommendation: 'Prepare for unexpected rain by wearing a raincoat over your T-shirt and jeans for a practical and comfortable outfit', image: raincoat},
+        cold: { recommendation: 'Good luck my friend! Wear something warmer under the raincoat.', image: raincoat},
+      },
+      'moderate rain': {
         hot: { recommendation: 'Pairing a T-shirt with jeans is a timeless choice, and do not forget to bring an umbrella for unpredictable weather conditions', image: shirtWithJeans},
         moderate: { recommendation: 'Prepare for unexpected rain by wearing a raincoat over your T-shirt and jeans for a practical and comfortable outfit', image: raincoat},
         cold: { recommendation: 'Good luck my friend! Wear something warmer under the raincoat.', image: raincoat},
@@ -59,7 +66,10 @@ export default function ClothingRecommendation({ weatherDesc, temperature }) {
     };
 
 
-    // Determine the temperature range
+    console.log('Temperature:', temperature);
+    console.log(typeof temperature); // Check the data type
+    temperature = parseInt(temperature, 10); // Parse the variable to ensure it's a number
+
     let temperatureRange;
     if (temperature > 25) {
       temperatureRange = 'hot';
@@ -68,6 +78,7 @@ export default function ClothingRecommendation({ weatherDesc, temperature }) {
     } else {
       temperatureRange = 'cold';
     }
+    console.log('Temperature range:', temperatureRange);
 
     const weatherCondition = weatherToClothes[weatherDesc.toLowerCase()] || weatherToClothes.default;
     return weatherCondition[temperatureRange] || {
