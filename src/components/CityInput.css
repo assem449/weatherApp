@@ -1,0 +1,11 @@
+.city-input {
+  font-size: 28px; 
+  padding: 20px;
+  height: 60px; 
+  width: 700px; 
+  border: 1px solid #120b0b;
+  border-radius: 30px; /* Add border-radius for rounded corners */
+  outline: none;
+  transition: all 0.3s ease;
+}
+

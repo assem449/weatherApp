@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: black;
+  user-select: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url('images/background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center; 
+  justify-content: space-around; 
+}
+
+.clothes-list {
+  flex: 1;
+  padding: 20px;
+  background-color: #B0C4DE;
+  height: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.clothes-list h2 {
+  font-size: 28px;
+}
+
+.clothes-list ul {
+  list-style:  none;
+}
+
+.clothes-list li {
+  font-size: 24px; 
+  margin-bottom: 10px; 
+}
+
+.weather-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  height: 1000px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.weather-box-list {
+  list-style: none;
+  padding: 0;
+}
+
+.weather-box-list li {
+  margin-bottom: 20px; 
+}
+
+.city-input {
+  font-size: 28px;
+  padding: 15px;
+  height: 60px;
+  width: 400px;
+  outline: none;
+  transition: all 0.3s ease;
+  border: none; 
+  background: none; 
+}
+
+.city-input:focus {
+  border-color: #007bff;
+}
+
+.bottom-bar {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
